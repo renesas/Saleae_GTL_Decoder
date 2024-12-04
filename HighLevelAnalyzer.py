@@ -33,7 +33,7 @@ class Hla(HighLevelAnalyzer):
         self.receive_buffer_pointer = 0
         self.receiveBuffer = []
 
-        print("Dialog Semiconductor GTL interface decoder")
+        print("Renesas Electronics Corporation GTL interface decoder")
 
     def decode(self, frame: AnalyzerFrame):
         return_packet = False
@@ -43,7 +43,7 @@ class Hla(HighLevelAnalyzer):
                 > (frame.end_time - frame.start_time) * 400
             ) and (self.receive_buffer_pointer > 0):
                 tempMSG = AnalyzerFrame(
-                    "err", self.startTime, frame.end_time, {"error_message": "Timeout"}
+                    "err", self.startTime, frame.start_time, {"error_message": "Timeout"}
                 )
                 self.receive_buffer_pointer = 0
                 return_packet = True

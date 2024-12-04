@@ -1,9 +1,9 @@
 {
   "name": "GTL interface decoder",
   "apiVersion": "1.0.0",
-  "author": "Dialog Semiconductor",
-  "version": "1.0.0",
-  "description": "Dialog GTL interface decoder",
+  "author": "Renesas Electronics Corporation",
+  "version": "2024.12.0",
+  "description": "Decoder for the GTL interface used by Renesas Smartbond devices",
   "extensions": {
     "GTL decode": {
       "type": "HighLevelAnalyzer",
